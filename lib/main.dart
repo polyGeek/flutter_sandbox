@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sandbox/content/scn_001_drop_down_enum/drop_down_enum.dart';
 import 'package:flutter_sandbox/content/scr_002_dropdown_dynamic/dropdown_dynamic.dart';
 import 'package:flutter_sandbox/content/scr_03_dropdown_form/dropdown_form.dart';
+import 'package:flutter_sandbox/content/scr_04_stream_builder/stream_builder_test.dart';
 
 /// Commit test
 void main() {
@@ -14,6 +15,7 @@ void main() {
                 DropDownEnum.ROUTE_PATH: ( BuildContext context ) => DropDownEnum(),
                 DropdownDynamic.ROUTE_PATH: ( BuildContext context ) => DropdownDynamic(),
                 DropDownFormExample.ROUTE_PATH: ( BuildContext context ) => DropDownFormExample(),
+                StreamDemo.ROUTE_PATH: ( BuildContext context ) => StreamDemo(),
             },
         )
     );
@@ -55,6 +57,13 @@ class _MainNav extends StatelessWidget {
                             description: "Red screen:",
                             createdBy: "Dan",
                             routePath: DropDownFormExample.ROUTE_PATH,
+                        ),
+
+                        _SandboxRenderer(
+                            title: "Stream Builder Demo",
+                            description: "Create a stream builder that listens to a stream and prints the value.",
+                            createdBy: "Dan",
+                            routePath: StreamDemo.ROUTE_PATH,
                         ),
 
                     ],
