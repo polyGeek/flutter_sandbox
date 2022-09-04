@@ -1,22 +1,24 @@
-
-
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class StreamDemo extends StatefulWidget {
-    static const String ROUTE_PATH = 'StreamDemo';
+    static const String ROUTE = 'StreamDemo';
 
     @override
     State<StreamDemo> createState() => _StreamDemoState();
 }
+
+/** ===============================================
+*  https://www.youtube.com/watch?v=Pp3zoNDGZUI
+*  ===============================================*/
+
 
 class _StreamDemoState extends State<StreamDemo> {
     @override
     Widget build( BuildContext context ) {
         return Scaffold(
             appBar: AppBar(
-                title: Text( 'TITLE' ),
+                title: Text( 'Stream Builder' ),
                 centerTitle: true,
                 actions: <Widget>[
 
@@ -40,9 +42,9 @@ class _StreamDemoState extends State<StreamDemo> {
                                     } else if( snapshot.hasError ) {
                                         return Text( 'Error: ${snapshot.error}' );
                                     } else {
-                                        return Text( snapshot.data.toString() ?? 'Well, this was unexpected' );
+                                        return Text( snapshot.data.toString() );
                                     }
-                                    Text( 'stream: ');
+
                                 }
                             ),
 
@@ -67,16 +69,16 @@ class _StreamDemoState extends State<StreamDemo> {
                                     } else if( snapshot.hasError ) {
                                         return Text( 'Error: ${snapshot.error}' );
                                     } else {
-                                        return Text( snapshot.data.toString() ?? 'Well, this was unexpected' );
+                                        return Text( snapshot.data.toString() );
                                     }
-                                    Text( 'stream: ');
+
                                 }
                             ),
                         ],
                     ),
                 ),
             ),
-        );;
+        );
     }
 }
 

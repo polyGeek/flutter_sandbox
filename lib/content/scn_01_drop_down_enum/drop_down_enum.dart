@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class DropDownEnum extends StatefulWidget {
 
-  static const String ROUTE_PATH         = '/drop_down_enum';
+  static const String ROUTE         = '/drop_down_enum';
 
   @override
   State<DropDownEnum> createState() => _DropDownEnumState();

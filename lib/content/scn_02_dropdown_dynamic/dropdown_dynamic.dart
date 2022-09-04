@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DropdownDynamic extends StatefulWidget {
-  static const String ROUTE_PATH         = '/dropdown_dynamic';
+  static const String ROUTE         = '/dropdown_dynamic';
 
   @override
   State<DropdownDynamic> createState() => _DropdownDynamicState();

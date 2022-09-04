@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_sandbox/content/scn_001_drop_down_enum/drop_down_enum.dart';
-import 'package:flutter_sandbox/content/scr_002_dropdown_dynamic/dropdown_dynamic.dart';
-import 'package:flutter_sandbox/content/scr_03_dropdown_form/dropdown_form.dart';
-import 'package:flutter_sandbox/content/scr_04_stream_builder/stream_builder_test.dart';
+import 'package:flutter_sandbox/content/scn_01_drop_down_enum/drop_down_enum.dart';
+import 'package:flutter_sandbox/content/scn_02_dropdown_dynamic/dropdown_dynamic.dart';
+import 'package:flutter_sandbox/content/scn_03_dropdown_form/dropdown_form.dart';
+import 'package:flutter_sandbox/content/scn_04_stream_builder/stream_builder_test.dart';
+import 'package:flutter_sandbox/content/scn_05_flutter330/flutter330.dart';
 
 /// Commit test
 void main() {
     runApp(
         MaterialApp(
+
+            /*theme: ThemeData(
+                useMaterial3: true
+            ),*/
             home: _MainNav(),
-            theme: ThemeData.dark(),
+            theme: ThemeData.dark( useMaterial3: true ),
             debugShowCheckedModeBanner: false,
             routes: {
-                DropDownEnum.ROUTE_PATH: ( BuildContext context ) => DropDownEnum(),
-                DropdownDynamic.ROUTE_PATH: ( BuildContext context ) => DropdownDynamic(),
-                DropDownFormExample.ROUTE_PATH: ( BuildContext context ) => DropDownFormExample(),
-                StreamDemo.ROUTE_PATH: ( BuildContext context ) => StreamDemo(),
+                DropDownEnum.ROUTE: ( BuildContext context ) => DropDownEnum(),
+                DropdownDynamic.ROUTE: ( BuildContext context ) => DropdownDynamic(),
+                DropDownFormExample.ROUTE: ( BuildContext context ) => DropDownFormExample(),
+                StreamDemo.ROUTE: ( BuildContext context ) => StreamDemo(),
+                Flutter330Exploration.ROUTE: ( BuildContext context ) => Flutter330Exploration(),
             },
         )
     );
@@ -42,28 +48,35 @@ class _MainNav extends StatelessWidget {
                             description: "DropDown using values of type enum. "
                                 "Also, an enum is used in a simulated 'saving state' widget.",
                             createdBy: "Dan",
-                            routePath: DropDownEnum.ROUTE_PATH,
+                            routePath: DropDownEnum.ROUTE,
                         ),
 
                         _SandboxRenderer(
                             title: "DropDownDynamic<T>",
                             description: "Simple modified DropDown using dynamic types.",
                             createdBy: "Dan",
-                            routePath: DropdownDynamic.ROUTE_PATH,
+                            routePath: DropdownDynamic.ROUTE,
                         ),
 
                         _SandboxRenderer(
                             title: "Dropdown Form",
                             description: "Red screen:",
                             createdBy: "Dan",
-                            routePath: DropDownFormExample.ROUTE_PATH,
+                            routePath: DropDownFormExample.ROUTE,
                         ),
 
                         _SandboxRenderer(
                             title: "Stream Builder Demo",
                             description: "Create a stream builder that listens to a stream and prints the value.",
                             createdBy: "Dan",
-                            routePath: StreamDemo.ROUTE_PATH,
+                            routePath: StreamDemo.ROUTE,
+                        ),
+
+                        _SandboxRenderer(
+                            title: "Flutter 3.3.0",
+                            description: "Large Appbar",
+                            createdBy: "Dan",
+                            routePath: Flutter330Exploration.ROUTE,
                         ),
 
                     ],

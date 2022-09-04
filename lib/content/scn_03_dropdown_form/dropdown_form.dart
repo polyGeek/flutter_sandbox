@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_utils/utils/string_extension.dart';
 
 
 class DropDownFormExample extends StatefulWidget {
-  static const String ROUTE_PATH         = '/dropdown_form_example';
+  static const String ROUTE         = '/dropdown_form_example';
 
   @override
   State<DropDownFormExample> createState() => _DropDownFormExampleState();
@@ -14,10 +13,10 @@ class _DropDownFormExampleState extends State<DropDownFormExample> {
   String? selectedValue;
 
   List<DropdownMenuItem<String>> dropdownItems = [
-    DropdownMenuItem(child: Text("USA"),value: "USA"),
-    DropdownMenuItem(child: Text("Canada"),value: "Canada"),
-    DropdownMenuItem(child: Text("Brazil"),value: "Brazil"),
-    DropdownMenuItem(child: Text("England"),value: "England"),
+    DropdownMenuItem( value: "USA", child: Text("USA"), ),
+    DropdownMenuItem( value: "Canada", child: Text("Canada") ),
+    DropdownMenuItem( value: "Brazil", child: Text("Brazil") ),
+    DropdownMenuItem( value: "England", child: Text("England")),
   ];
 
   @override
