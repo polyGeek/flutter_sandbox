@@ -4,6 +4,7 @@ import 'package:flutter_sandbox/content/scn_02_dropdown_dynamic/dropdown_dynamic
 import 'package:flutter_sandbox/content/scn_03_dropdown_form/dropdown_form.dart';
 import 'package:flutter_sandbox/content/scn_04_stream_builder/stream_builder_test.dart';
 import 'package:flutter_sandbox/content/scn_05_flutter330/flutter330.dart';
+import 'package:flutter_sandbox/content/scn_06_scaffold/scaffold_tips.dart';
 
 /// Commit test
 void main() {
@@ -22,6 +23,7 @@ void main() {
                 DropDownFormExample.ROUTE: ( BuildContext context ) => DropDownFormExample(),
                 StreamDemo.ROUTE: ( BuildContext context ) => StreamDemo(),
                 Flutter330Exploration.ROUTE: ( BuildContext context ) => Flutter330Exploration(),
+                ScaffoldTips.ROUTE: ( BuildContext context ) => ScaffoldTips(),
             },
         )
     );
@@ -77,6 +79,13 @@ class _MainNav extends StatelessWidget {
                             description: "Large Appbar",
                             createdBy: "Dan",
                             routePath: Flutter330Exploration.ROUTE,
+                        ),
+
+                        _SandboxRenderer(
+                            title: "Scaffold Tips",
+                            description: "",
+                            createdBy: "Dan",
+                            routePath: ScaffoldTips.ROUTE,
                         ),
 
                     ],
